@@ -33,10 +33,10 @@
             </div>
             <div class="mb-3" id="roleOptionContainer">
                 <select id="roleOption" class="form-select" aria-label="Default select example" onchange="pilihRole()">
-                    <option selected>Pilih Role Dulu Cuy....!!!!</option>
-                    <option value="1">Admin</option>
-                    <option value="2">Lecturer</option>
-                    <option value="3">Student</option>
+                    <option selected value="0">Role</option>
+                    <option value="Admin">Admin</option>
+                    <option value="lecturer">Lecturer</option>
+                    <option value="student">Student</option>
                 </select>
             </div>
             <div class="mb-3">
@@ -52,46 +52,45 @@
         </form>
     </div>
 
+
     <div id="dashboard-page" class="container d-flex justify-content-center align-items-center">
         <div id="dashboard-box">
-            <!-- Image and text -->
             <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#">
-                        <img src="/asset/Logo.png" alt="" height="35" width="40px"
+                        <img src="/asset/Logo.png" alt="" height="30" width="40px"
                             class="d-inline-block align-text-top">
-                        <span> Gemuk x Cuy University</span>
+                        <span id="brand-name"></span>
                     </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Dropdown link
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+                    <div class="d-flex justify-content-center align-items-center flex-row gap-3">
+                        <div id="role" class="border-end border-secondary border-1 pe-3"></div>
+                        <button type="button" id="toggler" onclick="sidebarToggler()">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
                     </div>
                 </div>
             </nav>
+            <div class="d-flex justify-content-center align-items-center flex-column sidebar-active2 sidebar-active"
+                id="sidebar">
+                <ul class="list-group list-group-flush mt-5" id="menu">
+                    <li class="list-group-item">
+                        Profil
+                    </li>
+                    <li class="list-group-item">
+                        Dashboard
+                    </li>
+                    <li class="list-group-item">
+                        Task
+                    </li>
+                </ul>
+                <div class="btn-group mb-4" role="group" id="btn-sidebar">
+                    <button type="button" class="btn btn-warning" onclick="logOut()">Keluar</button>
+                    <button type="button" class="btn btn-outline-danger" onclick="deleteAccount()">Hapus Akun</button>
+                </div>
+            </div>
         </div>
     </div>
+
 
 
 

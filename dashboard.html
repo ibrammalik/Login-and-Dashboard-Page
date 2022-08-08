@@ -14,42 +14,44 @@
 <body>
     <div id="dashboard-page" class="container d-flex justify-content-center align-items-center">
         <div id="dashboard-box">
-            <!-- Image and text -->
             <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#">
-                        <img src="/asset/Logo.png" alt="" height="35" width="40px"
+                        <img src="/asset/Logo.png" alt="" height="30" width="40px"
                             class="d-inline-block align-text-top">
-                        <span> Gemuk x Cuy University</span>
+                        <span id="brand-name"></span>
                     </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
-                        aria-label="Toggle navigation">
+                    <button type="button" id="toggler" onclick="sidebarToggler()">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Dropdown link
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </nav>
+            <div class="d-flex justify-content-center align-items-center flex-column sidebar-active2 sidebar-active"
+                id="sidebar">
+                <ul class="list-group list-group-flush mt-5" id="menu">
+                    <li class="list-group-item">
+                        Profil
+                    </li>
+                    <li class="list-group-item">
+                        Dashboard
+                    </li>
+                    <li class="list-group-item">
+                        Task
+                    </li>
+                    <li class="list-group-item">
+                        Hapus Akun
+                    </li>
+                </ul>
+                <div class="btn-group mb-4" role="group" aria-label="Basic radio toggle button group" id="btn-sidebar">
+                    <input type="radio" class="btn-warning btn-check" name="btnradio" id="btnradio1" autocomplete="off"
+                        checked>
+                    <label class="btn btn-outline-warning" for="btnradio1">Log Out</label>
+
+                    <input type="radio" class="btn-danger btn-check" name="btnradio" id="btnradio2" autocomplete="off"
+                        onclick="logOut()">
+                    <label class="btn btn-outline-danger" for="btnradio2">Hapus Akun</label>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -59,6 +61,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
         integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
         crossorigin="anonymous"></script>
+    <script src="/script.js"></script>
 </body>
 
 </html>
