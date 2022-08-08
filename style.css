@@ -64,12 +64,12 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    visibility: hidden;
     height: 100vh;
     max-width: none;
 }
 
 #dashboard-box {
+    overflow: hidden;
     width: 98%;
     height: 98%;
     /* From https://css.glass */
@@ -81,15 +81,21 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-#navbar {
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-}
-
 #logo {
     margin-left: 20px;
     margin-right: 20px;
     font-size: 1em;
+}
+
+#sidebar {
+    height: 100%;
+    background-color: white;
+    position: fixed;
+    right: 0;
+}
+
+.text-decoration-none{
+    text-decoration: none;
 }
 
 @media only screen and (max-width: 568px) {
