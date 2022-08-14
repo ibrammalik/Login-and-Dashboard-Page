@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 <body>
+
     <div id="login-page" class="container d-flex justify-content-center align-items-center">
         <form class="px-4 py-3" id="login-box" onsubmit="return false">
             <div class="mb-3 d-flex justify-content-center align-items-center gap-1">
@@ -35,8 +36,8 @@
                 <select id="roleOption" class="form-select" aria-label="Default select example" onchange="pilihRole()">
                     <option selected value="0">Role</option>
                     <option value="Admin">Admin</option>
-                    <option value="lecturer">Lecturer</option>
-                    <option value="student">Student</option>
+                    <option value="Lecturer">Lecturer</option>
+                    <option value="Student">Student</option>
                 </select>
             </div>
             <div class="mb-3">
@@ -49,6 +50,7 @@
                 <button class="btn btn-primary" onclick="signIn()" id="signInButton">Masuk</button>
                 <button class="btn btn-primary" onclick="signUp()" id="signUpButton">Daftar</button>
             </div>
+
         </form>
     </div>
 
@@ -58,9 +60,9 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#">
-                        <img src="/asset/Logo.png" alt="" height="30" width="40px"
+                        <img src="./asset/Logo.png" alt="" height="30" width="40px"
                             class="d-inline-block align-text-top">
-                        <span id="brand-name"></span>
+                        <span id="brand-name"> SCHOOL</span>
                     </a>
                     <div class="d-flex justify-content-center align-items-center flex-row gap-3">
                         <div id="role" class="border-end border-secondary border-1 pe-3"></div>
@@ -70,11 +72,29 @@
                     </div>
                 </div>
             </nav>
-            <div class="d-flex justify-content-center align-items-center flex-column sidebar-active2 sidebar-active"
-                id="sidebar">
+            <div class="d-flex justify-content-center align-items-center flex-column sidebar-active" id="sidebar">
                 <ul class="list-group list-group-flush mt-5" id="menu">
+                    <li class="list-group-item mx-auto">
+                        <div class="container-photo-profile">
+                            <div class="outer">
+                                <img src="" alt="" id="photo-profile" width="150px"
+                                    class="border border-dark border-3 rounded-circle">
+                                <div class="inner">
+                                    <input class="inputfile" type="file" name="pic" accept="image/*" onchange="ganti()"
+                                        id="input-images">
+                                    <label><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17"
+                                            viewBox="0 0 20 17">
+                                            <path
+                                                d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z">
+                                            </path>
+                                        </svg></label>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item mx-auto fw-bolder" id="username-profile"></li>
                     <li class="list-group-item">
-                        Profil
+                        Profile Setting
                     </li>
                     <li class="list-group-item">
                         Dashboard
@@ -83,16 +103,19 @@
                         Task
                     </li>
                 </ul>
-                <div class="btn-group mb-4" role="group" id="btn-sidebar">
+                <div class="btn-group mb-3" role="group" id="btn-sidebar">
                     <button type="button" class="btn btn-warning" onclick="logOut()">Keluar</button>
                     <button type="button" class="btn btn-outline-danger" onclick="deleteAccount()">Hapus Akun</button>
                 </div>
+                <button type="button" class="btn btn-dark mb-3" onclick="resetApp()" style="width: 90%;">Reset
+                    Aplikasi</button>
+            </div>
+            <div class="container d-flex justify-content-center align-items-center text-center flex-column">
+                <img src="./asset/kawaii.jpg" alt="" height="300px">
+                <h1>MOHON MAAF WEBSITE INI SEDANG DALAM TAHAP PENGEMBANGAN TENGKYUU!!</h1>
             </div>
         </div>
     </div>
-
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"

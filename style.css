@@ -1,149 +1,209 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
 body {
-    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #login-page {
-    height: 100vh;
+  height: 100vh;
 }
 
 #login-box {
-    width: 360px;
-    height: 380px;
-    /* From https://css.glass */
-    background: rgba(255, 255, 255, 0.6);
-    border-radius: 30px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-
+  width: 360px;
+  height: 380px;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 30px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 #roleOptionContainer {
-    display: none;
+  display: none;
 }
 
 #avatar1 {
-    width: 80px;
+  width: 80px;
 }
 #avatar2 {
-    width: 80px;
-    display: none;
+  width: 80px;
+  display: none;
 }
 #avatar3 {
-    width: 80px;
-    display: none;
+  width: 80px;
+  display: none;
 }
 #btn-container {
-    width: 100%;
+  width: 100%;
 }
 
 #dropdownMenuButton1 {
-    width: 100%;
+  width: 100%;
 }
 
 #dropdownMenu {
-    width: 100%;
+  width: 100%;
 }
 
 #signUpButton {
-    display: none;
+  display: none;
 }
 
 #dashboard-page {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    max-width: none;
-    visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  max-width: none;
+  visibility: hidden;
 }
 
 #dashboard-box {
-    overflow: hidden;
-    width: 98%;
-    height: 98%;
-    /* From https://css.glass */
-    background: rgba(255, 255, 255, 0.6);
-    border-radius: 30px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+  width: 98%;
+  height: 98%;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 30px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 #navbar {
-    padding: 0;
+  padding: 0;
+  z-index: 50;
 }
 
 #logo {
-    margin-left: 20px;
-    margin-right: 20px;
-    font-size: 1em;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 1em;
 }
 
 #brand-name {
-    margin-top: 20px;
-    font-weight: 500;
+  margin-top: 20px;
+  font-weight: 500;
 }
 
 #toggler {
-    padding: 0;
-    border: transparent;
-    border-radius: 30px;
-    background-color: transparent;
-    overflow: hidden;
+  padding: 0;
+  border: transparent;
+  border-radius: 30px;
+  background-color: transparent;
+  overflow: hidden;
 }
 
 #toggler-icon {
-    font-size: larger;
+  font-size: larger;
 }
 
 #dropdownMenuLink {
-    left: -90px
+  left: -90px;
 }
 
 #sidebar {
-    height: 100vh;
-    background-color: white;
-    position: fixed;
-    top: 0;
-    z-index: -1;
-    width: 300px;
+  height: 100%;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  z-index: 49;
+  width: 250px;
 }
 
 #menu {
-    height: 100vh;
-    width: 98%;
-    border: none;
+  height: 100vh;
+  width: 98%;
+  border: none;
 }
 
 #menu #menu1 {
-    list-style: none;
-    text-decoration: none;
+  list-style: none;
+  text-decoration: none;
 }
 
 #btn-sidebar {
-    width: 90%;
+  width: 90%;
 }
 
 .sidebar-active {
-    right: 0px;
+  right: 0px;
 }
 .sidebar-active2 {
-    right: -300px;
+  right: -300px;
+}
+
+.container-photo-profile {
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin: 0 auto;
+}
+
+.outer {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 150px !important; /* any size */
+  max-height: 150px !important; /* any size */
+  margin: auto;
+  background-color: transparent;
+  border-radius: 100%;
+  position: relative;
+}
+
+.inner {
+  background-color: black;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.inner:hover {
+  background-color: #5555ff;
+}
+.inputfile {
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+}
+.inputfile + label {
+  font-size: 1.25rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  pointer-events: none;
+  cursor: pointer;
+  line-height: 50px;
+  text-align: center;
+}
+.inputfile + label svg {
+  fill: #fff;
 }
 
 @media only screen and (max-width: 568px) {
-    
+  #brand-name {
+    font-size: 4vw;
+  }
+  #dashboard-box {
+    height: 88%;
+  }
 }
