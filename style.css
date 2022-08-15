@@ -114,7 +114,6 @@ body {
 
 #sidebar {
   height: 100%;
-  background-color: white;
   position: fixed;
   top: 0;
   z-index: 49;
@@ -197,6 +196,12 @@ body {
 }
 .inputfile + label svg {
   fill: #fff;
+}
+
+#main-section {
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
 }
 
 @media only screen and (max-width: 568px) {

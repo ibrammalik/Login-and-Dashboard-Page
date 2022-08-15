@@ -18,6 +18,7 @@ const sidebar = document.getElementById("sidebar");
 const usernameProfile = document.getElementById("username-profile");
 const inputImages = document.getElementById("input-images");
 const photoProfile = document.getElementById("photo-profile");
+const usernameJumbotron = document.getElementById("username-jumbotron");
 
 const pilihRole = () => {
   if (roleOption.value == "Admin") {
@@ -117,6 +118,7 @@ const signIn = () => {
     let role = localStorage.getItem(`role${usernumber}`);
     roleStatus.innerHTML = `${role}`;
     usernameProfile.innerHTML = `${localStorage.getItem(`username${usernumber}`)}`;
+    usernameJumbotron.innerHTML = `${localStorage.getItem(`username${usernumber}`)}`;
     loginPage.style.visibility = "hidden";
     dashboardPage.style.visibility = "visible";
     swal(`Kamu Sudah Masuk Cuy!!! Sebagai ${role}!!!`);

@@ -10,6 +10,7 @@
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet" type="text/css" />
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-scrollbar@latest/simple-scrollbar.css">
 
 <body>
 
@@ -62,26 +63,27 @@
                     <a class="navbar-brand" href="#">
                         <img src="./asset/Logo.png" alt="" height="30" width="40px"
                             class="d-inline-block align-text-top">
-                        <span id="brand-name"> SCHOOL</span>
+                        <span id="brand-name" class="fw-bolder"> SCHOOL</span>
                     </a>
                     <div class="d-flex justify-content-center align-items-center flex-row gap-3">
-                        <div id="role" class="border-end border-secondary border-1 pe-3"></div>
+                        <div id="role" class="border-end border-secondary border-1 pe-3 fw-bolder"></div>
                         <button type="button" id="toggler" onclick="sidebarToggler()">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                     </div>
                 </div>
             </nav>
-            <div class="d-flex justify-content-center align-items-center flex-column sidebar-active" id="sidebar">
-                <ul class="list-group list-group-flush mt-5" id="menu">
-                    <li class="list-group-item mx-auto">
+            <div class="d-flex justify-content-center align-items-center flex-column sidebar-active bg-light"
+                id="sidebar">
+                <ul class="list-group list-group-flush mt-5 " id="menu">
+                    <li class="list-group-item mx-auto bg-light">
                         <div class="container-photo-profile">
                             <div class="outer">
-                                <img src="" alt="" id="photo-profile" width="150px"
+                                <img src="" alt="" id="photo-profile" width="150px" height="150px"
                                     class="border border-dark border-3 rounded-circle">
                                 <div class="inner">
                                     <input class="inputfile" type="file" name="pic" accept="image/*" onchange="ganti()"
-                                        id="input-images">
+                                        id="input-images" title="Ganti Foto Profile">
                                     <label><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17"
                                             viewBox="0 0 20 17">
                                             <path
@@ -92,14 +94,14 @@
                             </div>
                         </div>
                     </li>
-                    <li class="list-group-item mx-auto fw-bolder" id="username-profile"></li>
-                    <li class="list-group-item">
+                    <li class="list-group-item mx-auto fw-bolder bg-light" id="username-profile"></li>
+                    <li class="list-group-item bg-light">
                         Profile Setting
                     </li>
-                    <li class="list-group-item">
+                    <li class="list-group-item bg-light">
                         Dashboard
                     </li>
-                    <li class="list-group-item">
+                    <li class="list-group-item bg-light">
                         Task
                     </li>
                 </ul>
@@ -110,9 +112,29 @@
                 <button type="button" class="btn btn-dark mb-3" onclick="resetApp()" style="width: 90%;">Reset
                     Aplikasi</button>
             </div>
-            <div class="container d-flex justify-content-center align-items-center text-center flex-column">
-                <img src="./asset/kawaii.jpg" alt="" height="300px">
-                <h1>MOHON MAAF WEBSITE INI SEDANG DALAM TAHAP PENGEMBANGAN TENGKYUU!!</h1>
+            <div id="main-section">
+                <div class="container py-4" style="height: 4000px;">
+                    <div class="p-5 mb-4 bg-light rounded-3">
+                        <div class="container-fluid py-1">
+                            <h1 class="display-7 fw-light">Welcome, <span id="username-jumbotron"></span>!!</h1>
+                            <p class="col-md-8 fs-7">Semoga Harimu Menyenangkan!!</p>
+                        </div>
+                    </div>
+                    <div class="row align-items-md-stretch">
+                        <div class="col-md-6">
+                            <div class="h-100 p-5 text-white bg-dark rounded-3">
+                                <img src="./asset/kawaii.jpg" alt="" height="150px">
+                                <h2>Comming Soon!!!</h2>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="h-100 p-5 bg-light border rounded-3">
+                                <img src="./asset/kawaii.jpg" alt="" height="150px">
+                                <h2>Comming Soon!!!</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
